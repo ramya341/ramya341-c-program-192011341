@@ -18,3 +18,20 @@ int main() {
 
     return 0;
 }
+
+OUTPUT
+Enter a three-digit integer: 153
+153 is an Armstrong number.
+
+Enter a three-digit integer: 26
+26 is not an Armstrong number.
+
+
+Enter a three-digit integer: 40585
+40585 is not an Armstrong number.
+
+Enter a three-digit integer: 160
+160 is not an Armstrong number.
+
+Enter a three-digit integer: 59.5
+59 is not an Armstrong number.
