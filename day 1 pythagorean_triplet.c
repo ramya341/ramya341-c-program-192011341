@@ -9,8 +9,7 @@ for(a=1;a<=final;a++){
 for(b=a;b<=final;b++){
 for(c=b;c<=final;c++){
 if(c*c==a*a+b*b){
-printf("%d , %d , %d\n",a,b,c);
- }            
+printf("%d , %d , %d\n",a,b,c); }            
 }
 }
 }
