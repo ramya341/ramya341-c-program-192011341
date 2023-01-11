@@ -1,55 +1,46 @@
-#include <stdio.h>
-
-int main()
+#include<stdio.h>
+main()
 {
-    int array[50], position, c, n, value;
-    
-    printf("Enter number of elements :\n");
-    scanf("%d", &n);
-    
-    printf("Enter %d elements\n", n);
-    
-    for (c = 0; c < n; c++)    
-        scanf("%d", &array[c]);
-    
-    printf("enter the position where you want to insert an new element\n");
-    scanf("%d", &position);
-    
-    printf("enter the new element :\n");
-    scanf("%d", &value);
-    
-    for (c = n - 1; c >= position - 1; c--)    
-        array[c+1] = array[c];
-    
-    array[position-1] = value;
-    
-    printf("array after inserting:\n");
-    
-    for (c = 0; c <= n; c++)    
-        printf("%d\n", array[c]);    
+    int arr1[50], arr2[50], size1, size2, i, k, merge[100];
+    printf("Enter Array 1 Size: ");
+    scanf("%d", &size1);
+    printf("Enter Array 1 Elements: ");
+    for(i=0; i<size1; i++)
+    {
+        scanf("%d", &arr1[i]);
+        merge[i] = arr1[i];
+    }
+    k = i;
+    printf("\nEnter Array 2 Size: ");
+    scanf("%d", &size2);
+    printf("Enter Array 2 Elements: ");
+    for(i=0; i<size2; i++)
+    {
+        scanf("%d", &arr2[i]);
+        merge[k] = arr2[i];
+        k++;
+    }
+    printf("\nThe new array after merging is:\n");
+    for(i=0; i<k; i++)
+        printf("%d ", merge[i]);
 }
 
 output
-Enter number of elements :
-7
-Enter 7 elements
-1
+Enter Array 1 Size: 7
+Enter Array 1 Elements: 1
 2
 3
 4
 5
 6
 7
-enter the position where you want to insert an new element
-5
-enter the new element :
-11
-array after inserting:
-1
-2
-3
-4
-11
-5
-6
-7
+
+Enter Array 2 Size: 5
+Enter Array 2 Elements: 11
+22
+33
+44
+55
+
+The new array after merging is:
+1 2 3 4 5 6 7 11 22 33 44 5
